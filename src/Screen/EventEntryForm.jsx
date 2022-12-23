@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // if you would like to change gradient colors go in index.css
-//
 
 import formImage from "../Assets/form-image.jpg";
 
