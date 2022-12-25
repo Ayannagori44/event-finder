@@ -1,13 +1,12 @@
 import React from "react";
-
+import { Routes, Route } from "react-router-dom";
 import EventEntryForm from "./Screen/EventEntryForm";
 
 const App = () => {
-  //   const [page, setpage] = useState("Home");
   return (
-    <section className="">
-      <EventEntryForm />
-    </section>
+    <Routes>
+      <Route path="evententryform" element={<EventEntryForm />} />
+    </Routes>
   );
 };
 

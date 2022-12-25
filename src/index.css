@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background: var(--primary-color);
+  color: white;
+}
+
 :root {
   --primary-color: #255fed;
   --secondary-color: #7cb9e8;
@@ -9,12 +14,7 @@
   --light2: #e9e9e9;
   --grey: #9ca3af;
   --dark1: #222;
-  --dark2: #444;
-}
-
-.container {
-  min-width: 90%;
-  margin: 0 auto;
+  --dark2: #666;
 }
 
 h1 {
@@ -25,18 +25,19 @@ h2 {
   @apply text-xl font-semibold;
 }
 
-.smooth-transition {
-  transition: all 0.3s ease-in-out;
+label {
+  @apply w-[120px]  text-xl font-semibold;
 }
 
-.hide-scrollbar::-webkit-scrollbar {
+.btn {
+  @apply px-9 py-2 text-xl bg-primary-color text-white rounded-3xl;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   display: none;
 }
 
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
 img {
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -47,12 +48,103 @@ img {
   -webkit-touch-callout: none;
 }
 
+input {
+  outline: none;
+  border: 1px solid var(--grey);
+  @apply smooth-transition w-[150px] px-3 text-primary-color font-semibold text-lg bg-transparent;
+}
+
+input:hover,
+input:active,
+input:focus {
+  border: 1px solid var(--primary-color);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.smooth-transition {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
 .gradient {
   background: linear-gradient(to bottom right, #f0f8ff, #6285a7);
 }
 
-input,
-a {
-  text-decoration: none;
-  outline: none;
+.container {
+  min-width: 90%;
+  margin: 0 auto;
+}
+
+/* Styles for heading of form */
+.add-line {
+  position: relative;
+  padding-left: 20px;
+}
+.add-line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 7px;
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+/* Styles for stepShower component */
+.line1 {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.line2 {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+.line3 {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.step > div {
+  background: var(--primary-color) !important;
+}
+.step h2,
+.step span {
+  opacity: 1 !important;
+  color: var(--primary-color) !important;
+}
+
+/* Styles for Tab in eventEntryForm step1 */
+.Indoor {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.Outdoor {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.Indoor.active,
+.Outdoor.active {
+  background: var(--primary-color) !important;
+  color: #f2f2f2 !important;
 }

@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 
-const Dropdown = ({ type, setType }) => {
+import { categories } from "../../Utils/constant";
+
+const Dropdown = ({ value, setValue, label }) => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <>
+    <div className=" my-8 flex relative items-end">
+      <label className="mr-4">{label}:</label>
+
       <button
         onClick={(e) => {
           e.preventDefault();
@@ -15,35 +19,28 @@ const Dropdown = ({ type, setType }) => {
       >
         <h3
           className={`flex items-end font-semibold text-lg ${
-            type === "select" ? "text-grey" : "text-primary-color"
+            value === "select" ? "text-grey" : "text-primary-color"
           }`}
         >
-          {type}{" "}
+          {value}
           <AiOutlineDown
             className={`ml-2 smooth-transition text-xl ${
               dropdown ? "" : "rotate-[-180deg]"
-            }  ${type === "select" ? "text-grey" : "text-primary-color"}`}
+            }  ${value === "select" ? "text-grey" : "text-primary-color"}`}
           />
         </h3>
       </button>
       <div
-        className={`smooth-transition w-[180px] drop-down flex flex-col items-start absolute top-8 left-20 ${
+        className={`smooth-transition rounded-xl bg-light1 pl-5 shadow-lg w-[180px] drop-down flex flex-col items-start absolute top-8 left-10 ${
           dropdown ? "" : "opacity-0 pointer-events-none"
         }`}
       >
-        {[
-          "Learning",
-          "Fun",
-          "Games",
-          "Activities",
-          "Fairs Exhibition",
-          "Food&Drink",
-        ].map((catego) => {
+        {categories.map((catego) => {
           return (
             <button
               onClick={(e) => {
                 e.preventDefault();
-                setType(e.target.innerText);
+                setValue(e.target.innerText);
                 setDropdown(false);
               }}
               key={catego}
@@ -54,7 +51,7 @@ const Dropdown = ({ type, setType }) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

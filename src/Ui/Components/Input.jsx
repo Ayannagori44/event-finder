@@ -1,19 +1,36 @@
 import React from "react";
 
-const Input = ({ name, setLocation, location }) => {
+import { useStore } from "../../Store/zustand";
+
+const Input = ({
+  name,
+  placeHolder,
+  value,
+  setValue,
+  classes,
+  type,
+  min,
+  max,
+}) => {
   return (
-    <div className=" flex items-end">
-      {console.log(setLocation, location)}
-      <h2 className="mr-4">{name}:</h2>
+    <>
+      {name && (
+        <label htmlFor={name} className={`mr-4`}>
+          {name}:
+        </label>
+      )}
       <input
+        id={name}
         required
-        className="outline-0 text-primary-color font-semibold text-xl bg-transparent"
-        type="text"
-        placeholder="Hydrabad"
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
+        type={type ? type : "text"}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        min={min}
+        max={max}
+        placeholder={placeHolder ? placeHolder : ""}
+        className={classes ? classes : ""}
       />
-    </div>
+    </>
   );
 };
 
