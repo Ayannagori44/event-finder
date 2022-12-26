@@ -31,4 +31,20 @@ export const useStore = create((set) => ({
     set((state) => ({ datetime: { ...state.datetime, date: val } })),
   setTime: (val) =>
     set((state) => ({ datetime: { ...state.datetime, time: val } })),
+
+  // ____________________________________ //
+  // Form step2 states
+  title: "",
+  setTitle: (val) => set({ title: val }),
+
+  breif: "",
+  setBreif: (val) => set({ breif: val }),
+
+  description: "",
+  setDescription: (val) => set({ description: val }),
+  // ____________________________________ //
+  // Form step3 states
+
+  // fee: "",
+  // setFee: (val) => set({ fee: val }),
 }));

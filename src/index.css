@@ -26,7 +26,7 @@ h2 {
 }
 
 label {
-  @apply w-[120px]  text-xl font-semibold;
+  @apply w-[120px]  text-xl font-semibold cursor-pointer;
 }
 
 .btn {
@@ -48,16 +48,25 @@ img {
   -webkit-touch-callout: none;
 }
 
-input {
+input,
+textarea {
   outline: none;
   border: 1px solid var(--grey);
   @apply smooth-transition w-[150px] px-3 text-primary-color font-semibold text-lg bg-transparent;
 }
 
+textarea:hover,
+textarea:active,
+textarea:focus,
 input:hover,
 input:active,
 input:focus {
   border: 1px solid var(--primary-color);
+}
+
+textarea {
+  width: unset !important;
+  resize: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

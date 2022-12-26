@@ -5,9 +5,9 @@ import React, { useState } from "react";
 import formImage from "../Assets/form-image.jpg";
 import StepShower from "../Ui/Components/StepShower";
 
-import EntryFormStep1 from "../Ui/Containers/EntryFormStep1";
-import EntryFormStep2 from "../Ui/Containers/EntryFormStep2";
-import EntryFormStep3 from "../Ui/Containers/EntryFormStep3";
+import EntryFormStep1 from "../Ui/Elements/EntryFormStep1";
+import EntryFormStep2 from "../Ui/Elements/EntryFormStep2";
+import EntryFormStep3 from "../Ui/Elements/EntryFormStep3";
 
 const EventEntryForm = () => {
   const [step, setStep] = useState(1); // number of step like 1,2 or 3
@@ -18,11 +18,11 @@ const EventEntryForm = () => {
         <div className="w-3/7">
           <img className="w-full rounded-2xl" src={formImage} alt="FormImage" />
         </div>
-        <div className="w-4/6 px-8 py-5 ">
+        <div className="w-4/6 px-8 py-4 ">
           {/* Step Shower */}
           <StepShower step={step} setStep={setStep} />
 
-          <h1 className="add-line relative text-primary-color mb-10">
+          <h1 className="add-line relative text-primary-color mb-8">
             Upload Event
           </h1>
 

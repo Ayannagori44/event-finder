@@ -1,14 +1,13 @@
 import React from "react";
 
-const Input = ({
+const Textarea = ({
   name,
-  placeHolder,
   value,
   setValue,
+  high,
+  wide,
   classes,
-  type,
-  min,
-  max,
+  maxLength,
 }) => {
   return (
     <>
@@ -17,19 +16,18 @@ const Input = ({
           {name}:
         </label>
       )}
-      <input
+      <textarea
         id={name}
         required
-        type={type ? type : "text"}
         value={value}
+        cols={wide}
+        rows={high}
         onChange={(e) => setValue(e.target.value)}
-        min={min}
-        max={max}
-        placeholder={placeHolder ? placeHolder : ""}
-        className={classes ? classes : ""}
+        maxLength={maxLength}
+        className={classes ? `${classes} hide-scrollbar` : "hide-scrollbar"}
       />
     </>
   );
 };
 
-export default Input;
+export default Textarea;
