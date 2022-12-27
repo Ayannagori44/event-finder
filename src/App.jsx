@@ -5,7 +5,7 @@ import EventEntryForm from "./Screen/EventEntryForm";
 const App = () => {
   return (
     <Routes>
-      <Route path="/evententryform" element={<EventEntryForm />} />
+      <Route path="/" element={<EventEntryForm />} />
     </Routes>
   );
 };
