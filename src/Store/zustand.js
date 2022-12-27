@@ -1,18 +1,25 @@
 import create from "zustand";
 
 export const useStore = create((set) => ({
-  location: "",
-  setLocation: (val) => set({ location: val }),
+  // Form step1 states
+  title: "",
+  setTitle: (val) => set({ title: val }),
 
-  // ____________________________________ //
-  category: "select",
-  setCategory: (val) => set({ category: val }),
+  breif: "",
+  setBreif: (val) => set({ breif: val }),
 
-  // ____________________________________ //
-  type: "Indoor",
-  setType: (val) => set({ type: val }),
+  description: "",
+  setDescription: (val) => set({ description: val }),
 
-  // ____________________________________ //
+  duration: {
+    start: "",
+    end: "",
+  },
+  setDurationStart: (val) =>
+    set((state) => ({ duration: { ...state.duration, start: val } })),
+  setDurationEnd: (val) =>
+    set((state) => ({ duration: { ...state.duration, end: val } })),
+
   ageRange: {
     start: !true,
     end: !true,
@@ -22,29 +29,45 @@ export const useStore = create((set) => ({
   setAgeEnd: (val) =>
     set((state) => ({ ageRange: { ...state.ageRange, end: Number(val) } })),
 
-  // ____________________________________ //
-  datetime: {
-    date: "",
-    time: "",
-  },
-  setDate: (val) =>
-    set((state) => ({ datetime: { ...state.datetime, date: val } })),
-  setTime: (val) =>
-    set((state) => ({ datetime: { ...state.datetime, time: val } })),
-
-  // ____________________________________ //
+  //
   // Form step2 states
-  title: "",
-  setTitle: (val) => set({ title: val }),
+  //
+  location: "",
+  setLocation: (val) => set({ location: val }),
 
-  breif: "",
-  setBreif: (val) => set({ breif: val }),
+  category: "select",
+  setCategory: (val) => set({ category: val }),
 
-  description: "",
-  setDescription: (val) => set({ description: val }),
-  // ____________________________________ //
+  type: "Indoor",
+  setType: (val) => set({ type: val }),
+
+  fee: "",
+  setFee: (val) => set({ fee: val }),
+
+  date: {
+    start: "",
+    end: "",
+  },
+  setDateStart: (val) =>
+    set((state) => ({ date: { ...state.date, start: val } })),
+  setDateEnd: (val) => set((state) => ({ date: { ...state.date, end: val } })),
+
+  //
   // Form step3 states
+  //
 
-  // fee: "",
-  // setFee: (val) => set({ fee: val }),
+  email: "",
+  setEmail: (val) => set({ email: val }),
+
+  url: "",
+  setUrl: (val) => set({ url: val }),
+
+  phone: {},
+  setPhone: (val) => set({ phone: Number(val) }),
+
+  address: "",
+  setAddress: (val) => set({ address: val }),
+
+  organization: "",
+  setOrganization: (val) => set({ organization: val }),
 }));

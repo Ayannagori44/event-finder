@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Input from "../Components/Input";
 import Dropdown from "../Components/Dropdown";
 import Tabs from "../Components/Tabs";
+import PictureBox from "../Components/PictureBox";
 
 import { useStore } from "../../Store/zustand";
 
@@ -18,13 +19,12 @@ const EntryFormStep1 = ({ setStep }) => {
     location,
     setLocation,
 
-    ageRange,
-    setAgeStart,
-    setAgeEnd,
+    fee,
+    setFee,
 
-    datetime,
-    setDate,
-    setTime,
+    date,
+    setDateStart,
+    setDateEnd,
   } = useStore((state) => state);
 
   return (
@@ -38,54 +38,34 @@ const EntryFormStep1 = ({ setStep }) => {
         />
       </div>
 
-      <div className=" my-8 items-center flex">
-        <Input
-          min="0"
-          max="100"
-          name="Age-range"
-          type="number"
-          classes="w-[70px]"
-          placeHolder="any"
-          value={ageRange.start}
-          setValue={setAgeStart}
-        />
-        <h3 className="mx-3">To</h3>
-        <Input
-          min="1"
-          max="100"
-          type="number"
-          classes="w-[70px]"
-          placeHolder="any"
-          value={ageRange.end}
-          setValue={setAgeEnd}
-        />
+      <div className="flex my-5 items-center">
+        <Input name="Fee" type={"number"} setValue={setFee} value={fee} />
       </div>
 
       {/* dropdown */}
       <Dropdown label={"Type"} value={category} setValue={setCategory} />
 
-      <div className="my-10 flex items-center">
-        <Input
-          name="Date-Time"
-          type="date"
-          classes="text-grey"
-          value={datetime.date}
-          setValue={setDate}
-        />
-        <Input
-          type="time"
-          classes="text-grey"
-          value={datetime.time}
-          setValue={setTime}
-        />
+      <div className="my-5 flex items-center">
+        <PictureBox name="Pictures" />
       </div>
 
-      <div className="my-10 flex items-center">
+      <div className="items-center mb-5 flex">
+        <Input
+          name="Date"
+          type="date"
+          value={date.start}
+          setValue={setDateStart}
+        />
+        <h3 className="mx-3">To</h3>
+        <Input type="date" value={date.end} setValue={setDateEnd} />
+      </div>
+
+      <div className="flex items-center">
         <Tabs value={type} setValue={setType} />
       </div>
 
       <button
-        className="btn"
+        className="btn-submit"
         onClick={(e) => {
           e.preventDefault();
           setStep((prevState) => prevState + 1);

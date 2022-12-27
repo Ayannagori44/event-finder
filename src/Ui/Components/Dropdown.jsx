@@ -7,7 +7,7 @@ const Dropdown = ({ value, setValue, label }) => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <div className=" my-8 flex relative items-end">
+    <div className="flex relative items-end">
       <label className="mr-4">{label}:</label>
 
       <button
