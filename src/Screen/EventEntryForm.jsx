@@ -7,7 +7,7 @@ import EntryFormStep2 from "../Ui/Elements/EntryFormStep2";
 import EntryFormStep3 from "../Ui/Elements/EntryFormStep3";
 
 const EventEntryForm = () => {
-  const [step, setStep] = useState(3); // number of step like 1,2 or 3
+  const [step, setStep] = useState(1); // number of step like 1,2 or 3
 
   return (
     <section className="flex items-center justify-center gradient min-h-screen">
