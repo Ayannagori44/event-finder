@@ -1,7 +1,8 @@
 import React from "react";
 
-import Input from "../Components/Input";
-import Textarea from "../Components/Textarea";
+import Input from "../Elements/Input";
+import Label from "../Elements/Label";
+import Textarea from "../Elements/Textarea";
 
 import { useStore } from "../../Store/zustand";
 
@@ -22,32 +23,34 @@ const EntryFormStep3 = ({ setStep }) => {
 
   return (
     <form className="step-1">
-      {console.log(email, url, phone, organization, address)}
-
-      <div className="flex items-center">
-        <Input name="email" value={email} setValue={setEmail} type="email" />
+      <div className="divide">
+        <Label title="Email" />
+        <Input id="Email" value={email} setValue={setEmail} type="email" />
       </div>
 
-      <div className="flex my-8 items-center">
-        <Input name="url" value={url} setValue={setUrl} />
+      <div className="divide my-8">
+        <Label title="Url" />
+        <Input id="Url" value={url} setValue={setUrl} />
       </div>
 
-      <div className="flex items-center">
-        <Input name="phone" value={phone} setValue={setPhone} type="number" />
+      <div className="divide">
+        <Label title="Phone" />
+        <Input id="Phone" value={phone} setValue={setPhone} type="number" />
       </div>
 
-      <div className="flex my-8 items-center">
+      <div className="divide my-8">
+        <Label title="Organization" />
         <Input
-          name="organization"
+          id="Organization"
           value={organization}
           setValue={setOrganization}
-          type="number"
         />
       </div>
 
-      <div className="flex my-5 w-full">
+      <div className="divide my-5 w-full">
+        <Label title="Address" />
         <Textarea
-          name="address"
+          id="Address"
           value={address}
           setValue={setAddress}
           high={"2"}

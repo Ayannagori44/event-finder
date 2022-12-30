@@ -21,13 +21,13 @@ export const useStore = create((set) => ({
     set((state) => ({ duration: { ...state.duration, end: val } })),
 
   ageRange: {
-    start: !true,
-    end: !true,
+    start: "",
+    end: "",
   },
   setAgeStart: (val) =>
-    set((state) => ({ ageRange: { ...state.ageRange, start: Number(val) } })),
+    set((state) => ({ ageRange: { ...state.ageRange, start: val } })),
   setAgeEnd: (val) =>
-    set((state) => ({ ageRange: { ...state.ageRange, end: Number(val) } })),
+    set((state) => ({ ageRange: { ...state.ageRange, end: val } })),
 
   //
   // Form step2 states
@@ -43,6 +43,15 @@ export const useStore = create((set) => ({
 
   fee: "",
   setFee: (val) => set({ fee: val }),
+
+  pictures: "",
+  setPictures: (val) => {
+    let values = [];
+    for (var i = 0; i < val.length; i++) {
+      values = [...values, val[i].name];
+    }
+    set({ pictures: values });
+  },
 
   date: {
     start: "",
@@ -62,7 +71,7 @@ export const useStore = create((set) => ({
   url: "",
   setUrl: (val) => set({ url: val }),
 
-  phone: {},
+  phone: 0,
   setPhone: (val) => set({ phone: Number(val) }),
 
   address: "",

@@ -2,20 +2,25 @@ import React, { useState } from "react";
 
 import StepShower from "../Ui/Components/StepShower";
 
-import EntryFormStep1 from "../Ui/Elements/EntryFormStep1";
-import EntryFormStep2 from "../Ui/Elements/EntryFormStep2";
-import EntryFormStep3 from "../Ui/Elements/EntryFormStep3";
+import EntryFormStep1 from "../Ui/Components/EntryFormStep1";
+import EntryFormStep2 from "../Ui/Components/EntryFormStep2";
+import EntryFormStep3 from "../Ui/Components/EntryFormStep3";
 
 const EventEntryForm = () => {
   const [step, setStep] = useState(1); // number of step like 1,2 or 3
+  const isMobile = window.screen.width < 640;
 
   return (
-    <section className="flex items-center justify-center gradient min-h-screen">
-      <div className="p-8 shadow-xl max-h-[95%] w-[600px] max-w-[98%] rounded-2xl bg-light1">
+    <section className="min-h-screen flex items-center justify-center gradient ">
+      <div className="my-2 py-8 px-4 md:px-8 shadow-xl w-[600px] max-w-[96%] rounded-2xl bg-light1">
         {/* Step Shower */}
-        <StepShower step={step} setStep={setStep} />
+        {!isMobile && <StepShower step={step} setStep={setStep} />}
 
-        <h1 className="add-line relative text-primary-color mb-8">
+        <h1
+          className={`relative text-primary-color mb-8 text-center sm:text-left md:text-2xl lg:text-3xl ${
+            isMobile ? "" : "add-line"
+          }`}
+        >
           {step === 1 && "Upload Event"}
           {step === 2 && "Details"}
           {step === 3 && "Contact"}
