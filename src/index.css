@@ -35,6 +35,10 @@ label {
   @apply text-dark1 block sm:w-[120px] text-xl mb-1 cursor-pointer;
 }
 
+span {
+  @apply block;
+}
+
 .btn-submit {
   @apply px-10 py-3 text-xl bg-primary-color text-white rounded-full flex mt-10 mx-auto;
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 const StepShower = ({ step }) => {
   return (
-    <div className=" mb-10 flex items-start justify-center">
+    <div className="mb-6 sm:mb-8 flex items-start justify-center">
       <article className={`w-1/3 ${step >= 1 ? "step" : ""}`}>
         <div className="line1 smooth-transition w-full h-[13px] bg-grey "></div>
         <h2 className="px-4 text-grey ">

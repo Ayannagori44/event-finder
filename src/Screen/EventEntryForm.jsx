@@ -12,7 +12,7 @@ const EventEntryForm = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center gradient ">
-      <div className="my-2 py-8 px-4 md:px-8 shadow-xl w-[600px] max-w-[96%] rounded-2xl bg-light1">
+      <div className="my-2 py-5 px-4 sm:py-8 md:px-8 shadow-xl w-[600px] max-w-[96%] rounded-2xl bg-light1">
         {/* Step Shower */}
         {!isMobile && <StepShower step={step} setStep={setStep} />}
 
