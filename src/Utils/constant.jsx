@@ -63,9 +63,19 @@ export const events = [
     phone: "567-890-1234",
     time: "17:00",
     date: "05/05/23",
-    address: "654 Art Avenue",
+    address: "Sarojini Nagar, Delhi",
     picture:
       "https://images.unsplash.com/photo-1640283691863-16b2910121c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGFydCUyMGluJTIwdGhlJTIwcGFya3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+  },
+  {
+    title: "Example for events with no suitable images",
+    fee: "2500",
+    organization: "Volunteer Group",
+    phone: "444-444-4444",
+    time: "22:00",
+    date: "14/02/24",
+    address: "S.V road, Jogeshwari Mumbai",
+    picture: "",
   },
   {
     title: "Annual Gala Dinner",
@@ -85,7 +95,7 @@ export const events = [
     phone: "222-222-2222",
     time: "20:00",
     date: "12/11/23",
-    address: "666 Park Avenue",
+    address: "Simnani gali, Hydrabad",
     picture:
       "https://images.unsplash.com/photo-1545048702-79362596cdc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG9saWRheSUyMHBhcnR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },
@@ -99,16 +109,6 @@ export const events = [
     address: "777 Beach Road",
     picture:
       "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmV3JTIweWVhcnMlMjBldmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-  },
-  {
-    title: "Valentine's Day Dance",
-    fee: "2500",
-    organization: "Volunteer Group",
-    phone: "444-444-4444",
-    time: "22:00",
-    date: "14/02/24",
-    address: "888 Food Street",
-    picture: "",
   },
   {
     title: "Easter Egg Hunt",
