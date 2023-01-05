@@ -13,34 +13,46 @@
   padding: 0;
 }
 
-:root {
+body {
   --primary-color: #6366f1;
   --secondary-color: #4ade80;
+
   --light1: #fff;
   --light2: #f3f3f3;
-  --grey: #ddd;
+  --grey: #4b5563;
   --dark1: #0f172a;
-  --dark2: #737373;
+  --background: #fff;
+}
+
+body.darkmode {
+  --primary-color: #818cf8;
+  --light1: #111827;
+  --light2: #1f2937;
+  --grey: #f3f4f6;
+  --dark1: #fff;
+  --background: #1f2937;
 }
 
 h1 {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-bold text-dark1;
 }
-
 h2 {
-  @apply text-2xl font-semibold;
+  @apply text-xl font-semibold text-dark1;
 }
-
+h2 {
+  @apply text-xl font-semibold text-dark1;
+}
+h3 {
+  @apply text-dark1 sm:mx-2;
+}
 label {
-  @apply text-dark1 block sm:w-[120px] text-xl mb-1 cursor-pointer;
+  @apply block text-grey font-medium text-lg mb-1 cursor-pointer;
 }
-
 span {
-  @apply block;
+  @apply block text-dark1;
 }
-
-.btn-submit {
-  @apply px-10 py-3 text-xl bg-primary-color text-white rounded-full flex mt-10 mx-auto;
+p {
+  @apply text-grey text-sm sm:text-base;
 }
 
 img {
@@ -57,7 +69,7 @@ input,
 textarea {
   outline: none;
   border: 1px solid transparent;
-  @apply smooth-transition w-full rounded-lg sm:w-[200px] px-3 py-1 text-dark2 font-semibold text-lg bg-light2;
+  @apply p-1 resize-none smooth-transition w-full rounded-lg sm:w-[380px] px-3 py-1 text-grey font-semibold text-lg bg-light2;
 }
 
 textarea:hover,
@@ -67,12 +79,6 @@ input:hover,
 input:active,
 input:focus {
   border-color: var(--dark1);
-}
-
-textarea {
-  width: 20rem;
-  padding: 0.25rem;
-  resize: none;
 }
 
 .smooth-transition {
@@ -118,25 +124,18 @@ textarea {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
-.line2 {
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-}
 .line3 {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 
 .step > div {
-  background: var(--primary-color) !important;
+  background: var(--primary-color);
 }
 .step h2,
 .step span {
-  opacity: 1 !important;
-  color: var(--primary-color) !important;
+  opacity: 1;
+  color: var(--primary-color);
 }
 
 /* Styles for Tab in eventEntryForm step1 */
@@ -175,4 +174,35 @@ input[type="number"] {
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.btn-submit {
+  @apply px-10 py-3 text-xl bg-primary-color text-white rounded-full flex mt-2 sm:mt-8 mx-auto;
+}
+
+/* Used in Page Not Found screen */
+.error-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f0b608' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23e6d710' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23e7af05' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23e7d808' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d8a408' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23f1e213' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23f0b607' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23e4d506' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23eab822' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23e8da14' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23e8b008' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23edde14' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+}
+.tracking-tighter-less {
+  letter-spacing: -0.75rem;
+}
+.text-shadow {
+  text-shadow: -8px 0 0 rgb(102 123 242);
+}
+
+@media screen and (max-height: 700px) {
+  .form {
+    height: 98vh;
+    margin: 0;
+    padding: 0.8rem;
+  }
+  .from label {
+    margin-bottom: 0;
+  }
+  input,
+  textarea {
+    padding: 0;
+    margin: 0;
+  }
 }

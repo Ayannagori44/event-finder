@@ -23,12 +23,12 @@ const EventList = ({ title }) => {
           return (
             <div
               key={index}
-              className="flex relative items-center border-2 border-grey my-5 mx-2 w-[450px] shadow-xl rounded-xl "
+              className="relative my-3.5 mx-2 w-full flex items-center bg-background rounded-xl smooth-transition py-1.5 shadow-xl hover:shadow-lg sm:w-[400px]"
             >
-              <button className="absolute top-[-1rem] left-[-1rem] flex items-center justify-center  p-4 rounded-full bg-primary-color text-white">
-                <BsFillBookmarkPlusFill style={{ fontSize: "1.2rem" }} />
+              <button className="absolute top-[-1rem] left-[-1rem] flex items-center justify-center p-3 rounded-full bg-primary-color text-white cursor-pointer">
+                <BsFillBookmarkPlusFill style={{ fontSize: "1.1rem" }} />
               </button>
-              <div className="w-[200px] mr-2">
+              <div className="w-[30%] mr-2">
                 <img
                   onError={(e) => handleImageLoadError(e.target)}
                   className="max-h-[full] object-cover object-center w-full rounded-xl"
@@ -40,11 +40,13 @@ const EventList = ({ title }) => {
                 <h2 className="text-primary-color my-1 text-lg">
                   {info.date} -- {info.time}
                 </h2>
-                <h2 className="text-lg">₹ {info.fee}</h2>
-                <p className="mt-1 text-dark2 text-sm sm:text-base font-semibold">
+                <h2 className="absolute text-base top-0 right-0 bg-dark1 text-primary-color">
+                  ₹ {info.fee}
+                </h2>
+                <p className="mt-1 text-grey text-sm sm:text-base font-semibold">
                   {info.address}
                 </p>
-                <span className="text-lg font-semibold pb-3">
+                <span className="text-lg font-semibold">
                   {info.organization}
                 </span>
               </div>
