@@ -29,8 +29,6 @@ const EventDetailPage = () => {
           ></path>
         </svg>
         <div className="absolute top-0 left-0 bg-primary-color w-screen h-[6rem]"></div>
-
-        {/*  */}
       </div>
     </section>
   );
