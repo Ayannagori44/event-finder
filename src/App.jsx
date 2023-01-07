@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import EventEntryForm from "./Screen/EventEntryForm";
 import EventList from "./Ui/Components/EventList";
 import PageNotFound from "./Screen/PageNotFound";
@@ -44,6 +44,7 @@ const App = () => {
         <Route path="/EventDetail/:eventTitle" element={<EventDetailPage />} />
         <Route path="/easteregg" element={<Popular />} />
         <Route path="/404" element={<PageNotFound />} />
+        <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
     </section>
   );
