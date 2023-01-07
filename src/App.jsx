@@ -43,7 +43,7 @@ const App = () => {
         <Route path="/eventsubmitionform" element={<EventEntryForm />} />
         <Route path="/EventDetail/:eventTitle" element={<EventDetailPage />} />
         <Route path="/easteregg" element={<Popular />} />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="/404" element={<PageNotFound />} />
       </Routes>
     </section>
   );
