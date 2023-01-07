@@ -4,6 +4,7 @@ import EventEntryForm from "./Screen/EventEntryForm";
 import EventList from "./Ui/Components/EventList";
 import PageNotFound from "./Screen/PageNotFound";
 import EventDetailPage from "./Screen/EventDetailPage";
+import Popular from "../Popular";
 
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/" element={<EventList title="Events in Hydrabad" />} />
         <Route path="/eventsubmitionform" element={<EventEntryForm />} />
         <Route path="/EventDetail/:eventTitle" element={<EventDetailPage />} />
+        <Route path="/easteregg" element={<Popular />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </section>

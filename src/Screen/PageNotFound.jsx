@@ -7,10 +7,10 @@ const PageNotFound = () => {
     <div className="flex items-center justify-center min-h-screen bg-primary-color bg-fixed bg-cover bg-bottom error-bg">
       <div className="justify-center text-gray-50 text-center -mt-[250px]">
         <div className="relative">
-          <h1 className="flex items-center justify-center -ml-20 text-9xl tracking-tighter-less text-shadow font-bold">
-            <span>4</span>
-            <span>0</span>
-            <span>4</span>
+          <h1 className=" flex items-center justify-center -ml-20 text-9xl tracking-tighter-less text-shadow font-bold">
+            <span className="text-gray-50">4</span>
+            <span className="text-gray-50">0</span>
+            <span className="text-gray-50">4</span>
           </h1>
           <span className="absolute -top-2 left-[100px] sm:left-[180px] text-gray-300 font-semibold">
             Oops!
