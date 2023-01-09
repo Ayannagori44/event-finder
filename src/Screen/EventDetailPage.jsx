@@ -2,6 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 import { events } from "../Utils/constant";
+import { AiOutlineCalendar } from "react-icons/ai";
+import { MdLocationOn } from "react-icons/md";
 
 const EventDetailPage = () => {
   const { eventTitle } = useParams();
@@ -29,6 +31,49 @@ const EventDetailPage = () => {
           ></path>
         </svg>
         <div className="absolute top-0 left-0 bg-primary-color w-screen h-[6rem]"></div>
+
+        {/* Content */}
+        <div className="conatainer flex justify-between mt-20">
+          <div className="left w-3/4 px-4">
+            <h2 className="text-lg font-bold">{thisEvent.date}</h2>
+            <h1 className="text-5xl mb-4 sm:mb-8">{thisEvent.title}</h1>
+            <p className="sm:text-medium text-base font-bold">
+              {thisEvent.brief}
+            </p>
+            <h2 className="my-3 text-lg">
+              By{" "}
+              <span className="inline underline text-primary-color cursor-pointer">
+                {thisEvent.organization}
+              </span>
+            </h2>
+
+            <h1 className="my-10">When And Where</h1>
+            <div className="flex justify-between">
+              <article className="flex">
+                <div className="icon mr-5 flex items-center justify-center bg-light2 p-4 rounded-full">
+                  <AiOutlineCalendar className="text-3xl text-primary-color" />
+                </div>
+                <div className="detail">
+                  <h1>Date and time</h1>
+                  <h2>
+                    {thisEvent.date}, {thisEvent.time}
+                  </h2>
+                </div>
+              </article>
+              <article className="flex">
+                <div className="icon mr-5 flex items-center justify-center bg-light2 p-4 rounded-full">
+                  <MdLocationOn className="text-3xl text-primary-color" />
+                </div>
+                <div className="detail">
+                  <h1>Location</h1>
+                  <h2>{thisEvent.address}</h2>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div className="right w-1/4 px-4">{/* Right side */}Right Side</div>
+        </div>
       </div>
     </section>
   );

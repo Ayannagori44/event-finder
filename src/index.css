@@ -94,7 +94,8 @@ input:focus {
 }
 
 .container {
-  min-width: 90%;
+  max-width: 98%;
+  width: 88%;
   margin: 0 auto;
 }
 

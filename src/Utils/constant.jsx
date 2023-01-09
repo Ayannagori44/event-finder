@@ -19,6 +19,8 @@ export const events = [
     time: "13:00",
     date: "01/05/23",
     address: "123 Main Street",
+    brief:
+      "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
       "https://images.unsplash.com/photo-1522244451342-a41bf8a13d73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YmFyYmVxdWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
   },
@@ -30,6 +32,8 @@ export const events = [
     time: "14:00",
     date: "02/05/23",
     address: "456 Park Avenue",
+    brief:
+      "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
       "https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hhcml0eSUyMGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },
@@ -41,6 +45,8 @@ export const events = [
     time: "15:00",
     date: "03/05/23",
     address: "789 Beach Road",
+    brief:
+      "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
       "https://images.unsplash.com/photo-1546484458-6904289cd4f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmVhY2glMjBwYXJ0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
   },
@@ -52,6 +58,8 @@ export const events = [
     time: "16:00",
     date: "04/05/23",
     address: "321 Food Street",
+    brief:
+      "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
       "https://images.unsplash.com/photo-1620589125156-fd5028c5e05b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZCUyMHRydWNrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },
@@ -63,6 +71,8 @@ export const events = [
     time: "17:00",
     date: "05/05/23",
     address: "Sarojini Nagar, Delhi",
+    brief:
+      "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
       "https://images.unsplash.com/photo-1640283691863-16b2910121c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGFydCUyMGluJTIwdGhlJTIwcGFya3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
   },
@@ -74,6 +84,8 @@ export const events = [
     time: "22:00",
     date: "14/02/24",
     address: "S.V road, Jogeshwari Mumbai",
+    brief:
+      "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture: "",
   },
   {
@@ -84,6 +96,8 @@ export const events = [
     time: "19:00",
     date: "11/11/23",
     address: "555 Main Street",
+    brief:
+      "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
       "https://images.unsplash.com/photo-1536392706976-e486e2ba97af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGlubmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },
@@ -95,6 +109,8 @@ export const events = [
     time: "20:00",
     date: "12/11/23",
     address: "Simnani gali, Hydrabad",
+    brief:
+      "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
       "https://images.unsplash.com/photo-1545048702-79362596cdc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG9saWRheSUyMHBhcnR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },
@@ -106,6 +122,8 @@ export const events = [
     time: "21:00",
     date: "31/12/23",
     address: "777 Beach Road",
+    brief:
+      "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
       "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmV3JTIweWVhcnMlMjBldmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
   },
@@ -117,6 +135,8 @@ export const events = [
     time: "23:00",
     date: "04/04/24",
     address: "999 Art Avenue",
+    brief:
+      "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
       "https://images.unsplash.com/photo-1457301353672-324d6d14f471?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZWFzdGVyJTIwZWdnfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   },
