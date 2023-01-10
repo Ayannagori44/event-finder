@@ -21,6 +21,7 @@ body {
   --light2: #f3f3f3;
   --grey: #4b5563;
   --dark1: #0f172a;
+  --grey2: #eee;
   --background: #fff;
 }
 
@@ -29,6 +30,7 @@ body.darkmode {
   --light1: #111827;
   --light2: #1f2937;
   --grey: #ddd;
+  --grey2: #1f2937;
   --dark1: #fff;
   --background: #1f2937;
 }

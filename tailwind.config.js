@@ -9,6 +9,7 @@ module.exports = {
         light1: "var(--light1)",
         light2: "var(--light2)",
         dark1: "var(--dark1)",
+        dark2: "var(--dark2)",
         grey: "var(--grey)",
         background: "var(--background)",
       },

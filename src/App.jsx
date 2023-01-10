@@ -4,7 +4,7 @@ import EventEntryForm from "./Screen/EventEntryForm";
 import EventList from "./Ui/Components/EventList";
 import PageNotFound from "./Screen/PageNotFound";
 import EventDetailPage from "./Screen/EventDetailPage";
-import Popular from "../Popular";
+import Profile from "./Screen/Profile";
 
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
@@ -42,9 +42,10 @@ const App = () => {
         <Route path="/" element={<EventList title="Events in Hydrabad" />} />
         <Route path="/eventsubmitionform" element={<EventEntryForm />} />
         <Route path="/EventDetail/:eventTitle" element={<EventDetailPage />} />
-        <Route path="/easteregg" element={<Popular />} />
+        <Route path="/Profile" element={<Profile />} />
         <Route path="/404" element={<PageNotFound />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
+        {/* same place where you opened the server */}
       </Routes>
     </section>
   );

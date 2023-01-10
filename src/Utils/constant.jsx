@@ -19,6 +19,9 @@ export const events = [
     time: "13:00",
     date: "01/05/23",
     address: "123 Main Street",
+    description:
+      "Global Opportunities, one of India's most prestigious worldwide education organizations, plans out the Global Education Fair every year. To be composed in distinctive urban areas crosswise over India, the occasion will be gone to by the delegates of 80+ driving colleges and universities from 9 study abroad destinations Save the Date:- 27th January 2023 Venue:- Hyatt Place, Banjara Hill Timing:- 11:00 AM to 05:00 PM Get booking ticket on call:- +91-8282828215 Highlights of Global Education Fair 2023 area • Apply to the best colleges around the world • 80+ universities across various cities • On the spot application submission • Huge discount on coaching charges",
+
     brief:
       "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
@@ -32,6 +35,9 @@ export const events = [
     time: "14:00",
     date: "02/05/23",
     address: "456 Park Avenue",
+    description:
+      "Global Opportunities, one of India's most prestigious worldwide education organizations, plans out the Global Education Fair every year. To be composed in distinctive urban areas crosswise over India, the occasion will be gone to by the delegates of 80+ driving colleges and universities from 9 study abroad destinations Save the Date:- 27th January 2023 Venue:- Hyatt Place, Banjara Hill Timing:- 11:00 AM to 05:00 PM Get booking ticket on call:- +91-8282828215 Highlights of Global Education Fair 2023 area • Apply to the best colleges around the world • 80+ universities across various cities • On the spot application submission • Huge discount on coaching charges",
+
     brief:
       "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
@@ -45,6 +51,9 @@ export const events = [
     time: "15:00",
     date: "03/05/23",
     address: "789 Beach Road",
+    description:
+      "Global Opportunities, one of India's most prestigious worldwide education organizations, plans out the Global Education Fair every year. To be composed in distinctive urban areas crosswise over India, the occasion will be gone to by the delegates of 80+ driving colleges and universities from 9 study abroad destinations Save the Date:- 27th January 2023 Venue:- Hyatt Place, Banjara Hill Timing:- 11:00 AM to 05:00 PM Get booking ticket on call:- +91-8282828215 Highlights of Global Education Fair 2023 area • Apply to the best colleges around the world • 80+ universities across various cities • On the spot application submission • Huge discount on coaching charges",
+
     brief:
       "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
@@ -58,6 +67,9 @@ export const events = [
     time: "16:00",
     date: "04/05/23",
     address: "321 Food Street",
+    description:
+      "Global Opportunities, one of India's most prestigious worldwide education organizations, plans out the Global Education Fair every year. To be composed in distinctive urban areas crosswise over India, the occasion will be gone to by the delegates of 80+ driving colleges and universities from 9 study abroad destinations Save the Date:- 27th January 2023 Venue:- Hyatt Place, Banjara Hill Timing:- 11:00 AM to 05:00 PM Get booking ticket on call:- +91-8282828215 Highlights of Global Education Fair 2023 area • Apply to the best colleges around the world • 80+ universities across various cities • On the spot application submission • Huge discount on coaching charges",
+
     brief:
       "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
@@ -71,6 +83,9 @@ export const events = [
     time: "17:00",
     date: "05/05/23",
     address: "Sarojini Nagar, Delhi",
+    description:
+      "Global Opportunities, one of India's most prestigious worldwide education organizations, plans out the Global Education Fair every year. To be composed in distinctive urban areas crosswise over India, the occasion will be gone to by the delegates of 80+ driving colleges and universities from 9 study abroad destinations Save the Date:- 27th January 2023 Venue:- Hyatt Place, Banjara Hill Timing:- 11:00 AM to 05:00 PM Get booking ticket on call:- +91-8282828215 Highlights of Global Education Fair 2023 area • Apply to the best colleges around the world • 80+ universities across various cities • On the spot application submission • Huge discount on coaching charges",
+
     brief:
       "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
@@ -84,6 +99,9 @@ export const events = [
     time: "22:00",
     date: "14/02/24",
     address: "S.V road, Jogeshwari Mumbai",
+    description:
+      "Global Opportunities, one of India's most prestigious worldwide education organizations, plans out the Global Education Fair every year. To be composed in distinctive urban areas crosswise over India, the occasion will be gone to by the delegates of 80+ driving colleges and universities from 9 study abroad destinations Save the Date:- 27th January 2023 Venue:- Hyatt Place, Banjara Hill Timing:- 11:00 AM to 05:00 PM Get booking ticket on call:- +91-8282828215 Highlights of Global Education Fair 2023 area • Apply to the best colleges around the world • 80+ universities across various cities • On the spot application submission • Huge discount on coaching charges",
+
     brief:
       "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture: "",
@@ -96,6 +114,9 @@ export const events = [
     time: "19:00",
     date: "11/11/23",
     address: "555 Main Street",
+    description:
+      "Global Opportunities, one of India's most prestigious worldwide education organizations, plans out the Global Education Fair every year. To be composed in distinctive urban areas crosswise over India, the occasion will be gone to by the delegates of 80+ driving colleges and universities from 9 study abroad destinations Save the Date:- 27th January 2023 Venue:- Hyatt Place, Banjara Hill Timing:- 11:00 AM to 05:00 PM Get booking ticket on call:- +91-8282828215 Highlights of Global Education Fair 2023 area • Apply to the best colleges around the world • 80+ universities across various cities • On the spot application submission • Huge discount on coaching charges",
+
     brief:
       "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
@@ -109,6 +130,9 @@ export const events = [
     time: "20:00",
     date: "12/11/23",
     address: "Simnani gali, Hydrabad",
+    description:
+      "Global Opportunities, one of India's most prestigious worldwide education organizations, plans out the Global Education Fair every year. To be composed in distinctive urban areas crosswise over India, the occasion will be gone to by the delegates of 80+ driving colleges and universities from 9 study abroad destinations Save the Date:- 27th January 2023 Venue:- Hyatt Place, Banjara Hill Timing:- 11:00 AM to 05:00 PM Get booking ticket on call:- +91-8282828215 Highlights of Global Education Fair 2023 area • Apply to the best colleges around the world • 80+ universities across various cities • On the spot application submission • Huge discount on coaching charges",
+
     brief:
       "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
@@ -122,6 +146,9 @@ export const events = [
     time: "21:00",
     date: "31/12/23",
     address: "777 Beach Road",
+    description:
+      "Global Opportunities, one of India's most prestigious worldwide education organizations, plans out the Global Education Fair every year. To be composed in distinctive urban areas crosswise over India, the occasion will be gone to by the delegates of 80+ driving colleges and universities from 9 study abroad destinations Save the Date:- 27th January 2023 Venue:- Hyatt Place, Banjara Hill Timing:- 11:00 AM to 05:00 PM Get booking ticket on call:- +91-8282828215 Highlights of Global Education Fair 2023 area • Apply to the best colleges around the world • 80+ universities across various cities • On the spot application submission • Huge discount on coaching charges",
+
     brief:
       "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
@@ -135,6 +162,9 @@ export const events = [
     time: "23:00",
     date: "04/04/24",
     address: "999 Art Avenue",
+    description:
+      "Global Opportunities, one of India's most prestigious worldwide education organizations, plans out the Global Education Fair every year. To be composed in distinctive urban areas crosswise over India, the occasion will be gone to by the delegates of 80+ driving colleges and universities from 9 study abroad destinations Save the Date:- 27th January 2023 Venue:- Hyatt Place, Banjara Hill Timing:- 11:00 AM to 05:00 PM Get booking ticket on call:- +91-8282828215 Highlights of Global Education Fair 2023 area • Apply to the best colleges around the world • 80+ universities across various cities • On the spot application submission • Huge discount on coaching charges",
+
     brief:
       "Attend the Global Education Fair January 2023 to fulfil your dream of overseas education and explore the world.",
     picture:
