@@ -5,6 +5,7 @@ import EventList from "./Ui/Components/EventList";
 import PageNotFound from "./Screen/PageNotFound";
 import EventDetailPage from "./Screen/EventDetailPage";
 import Profile from "./Screen/Profile";
+import Home from "./Screen/Home";
 
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
@@ -28,18 +29,19 @@ const App = () => {
   return (
     <section className={`App ${darkMode ? "darkmode" : ""}`}>
       <button
-        className="fixed z-10 bottom-2 right-2 sm:bottom-7 sm:right-7 rounded-full bg-dark1 p-2"
+        className="fixed bottom-2 right-2 z-10 rounded-full bg-dark1 p-2 sm:bottom-7 sm:right-7"
         onClick={toggleDarkMode}
       >
         {darkMode && (
-          <MdLightMode className="text-light1 text-4xl sm:text-5xl smooth-transition" />
+          <MdLightMode className="smooth-transition text-4xl text-light1 sm:text-5xl" />
         )}
         {!darkMode && (
-          <MdDarkMode className="text-light1 text-4xl sm:text-5xl smooth-transition" />
+          <MdDarkMode className="smooth-transition text-4xl text-light1 sm:text-5xl" />
         )}
       </button>
       <Routes>
         <Route path="/" element={<EventList title="Events in Hydrabad" />} />
+        <Route path="/home" element={<Home title="Events in Hydrabad" />} />
         <Route path="/eventsubmitionform" element={<EventEntryForm />} />
         <Route path="/EventDetail/:eventTitle" element={<EventDetailPage />} />
         <Route path="/Profile" element={<Profile />} />

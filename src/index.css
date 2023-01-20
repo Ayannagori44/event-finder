@@ -3,58 +3,39 @@
 @tailwind utilities;
 
 ::selection {
-  background: var(--primary-color);
+  background: var(--primary);
   color: white;
 }
 
-* {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* #fcc7a5 less light */
 body {
-  --primary-color: #6366f1;
-  --secondary-color: #4ade80;
+  --primary: #f87720;
+  --secondary: #8c3700;
+  --bg-color: #fdd2b5;
 
+  --dark1: #2a303c;
+  --dark2: #272a36;
+  --grey: #334155;
+  --grey2: #4a4d55;
   --light1: #fff;
-  --light2: #f3f3f3;
-  --grey: #4b5563;
-  --dark1: #0f172a;
-  --grey2: #eee;
-  --background: #fff;
+  --light2: #f0f0f0;
+  --divider: #2a303c35;
 }
 
 body.darkmode {
-  --primary-color: #818cf8;
-  --light1: #111827;
-  --light2: #1f2937;
-  --grey: #ddd;
-  --grey2: #1f2937;
   --dark1: #fff;
-  --background: #1f2937;
-}
-
-h1 {
-  @apply text-2xl font-bold text-dark1;
-}
-h2 {
-  @apply text-xl font-semibold text-dark1;
-}
-h2 {
-  @apply text-xl font-semibold text-dark1;
-}
-h3 {
-  @apply text-dark1 sm:mx-2;
-}
-label {
-  @apply block text-grey font-medium text-lg mb-1 cursor-pointer;
-}
-span {
-  @apply block text-dark1;
-}
-p {
-  @apply text-grey text-sm sm:text-base;
+  --dark2: #f0f0f0;
+  --grey: #cbd5e1;
+  --light1: #2a303c;
+  --light2: #382f32;
 }
 
 img {
@@ -67,21 +48,28 @@ img {
   -webkit-touch-callout: none;
 }
 
-input,
+/* input,
 textarea {
   outline: none;
   border: 1px solid transparent;
-  @apply p-1 resize-none smooth-transition w-full rounded-lg sm:w-[380px] px-3 py-1 text-grey font-semibold text-lg bg-light2;
-}
+  @apply smooth-transition w-full resize-none rounded-lg bg-light2 p-1 px-3 py-1 text-lg font-semibold text-grey sm:w-[380px];
+} */
 
-textarea:hover,
+/* textarea:hover,
 textarea:active,
 textarea:focus,
 input:hover,
 input:active,
 input:focus {
   border-color: var(--dark1);
+} */
+/* 
+.icon {
+  @apply mr-5 flex cursor-pointer items-center justify-center rounded-full bg-light2 p-4;
 }
+.icon > * {
+  @apply text-lg text-primary sm:text-xl lg:text-3xl;
+} */
 
 .smooth-transition {
   transition: all 0.3s ease-in-out;
@@ -95,50 +83,13 @@ input:focus {
   background: linear-gradient(to bottom right, #38bdf8, #1e40af);
 }
 
-.container {
-  max-width: 98%;
-  width: 88%;
-  margin: 0 auto;
-}
-
-/* Styles for heading of form */
-.add-line {
-  position: relative;
-  padding-left: 20px;
-}
-.add-line::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 2px;
-  left: 0;
-  width: 7px;
-  height: 100%;
-  background: var(--primary-color);
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-}
-
-/* Styles for stepShower component */
-.line1 {
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-}
-.line3 {
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
 .step > div {
-  background: var(--primary-color);
+  background: var(--primary);
 }
 .step h2,
 .step span {
   opacity: 1;
-  color: var(--primary-color);
+  color: var(--primary);
 }
 
 /* Styles for Tab in eventEntryForm step1 */
@@ -153,7 +104,7 @@ input:focus {
 
 .Indoor.active,
 .Outdoor.active {
-  background: var(--primary-color) !important;
+  background: var(--primary) !important;
   color: #f2f2f2 !important;
 }
 
@@ -188,7 +139,7 @@ input[type="number"] {
 }
 
 .btn-submit {
-  @apply px-10 py-3 text-xl bg-primary-color text-white rounded-full flex mt-2 sm:mt-8 mx-auto;
+  @apply mx-auto mt-2 flex rounded-full bg-primary px-10 py-3 text-xl text-white sm:mt-8;
 }
 
 /* Used in Page Not Found screen */
