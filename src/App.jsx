@@ -5,44 +5,52 @@ import EventList from "./Ui/Components/EventList";
 import PageNotFound from "./Screen/PageNotFound";
 import EventDetailPage from "./Screen/EventDetailPage";
 import Profile from "./Screen/Profile";
+import { useStore } from "./Store/zustand";
 import Home from "./Screen/Home";
+import Loading from "./Ui/Components/Loading";
 
 import { MdLightMode, MdDarkMode } from "react-icons/md";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("darkmode") === "true"
-  );
+  const { darkMode, setDarkMode } = useStore((state) => state);
 
   const toggleDarkMode = () => {
-    setDarkMode((prevDarkMode) => {
-      localStorage.setItem("darkmode", !prevDarkMode);
-      return !prevDarkMode;
-    });
+    setDarkMode(darkMode);
   };
 
   useEffect(() => {
-    localStorage.setItem("darkmode", darkMode ? "true" : "false");
     document.body.classList.toggle("darkmode", darkMode);
   }, [darkMode]);
 
+  window.addEventListener("storage", (e) => {
+    if (e.key === "darkMode") {
+      useStore((state) => {
+        state.darkMode = e.newValue;
+      });
+    }
+  });
+
   return (
-    <section className={`App ${darkMode ? "darkmode" : ""}`}>
+    <section className={`App ${darkMode === "true" ? "darkmode" : ""}`}>
       <button
-        className="fixed bottom-2 right-2 z-10 rounded-full bg-dark1 p-2 sm:bottom-7 sm:right-7"
-        onClick={toggleDarkMode}
+        className="smooth-transition fixed bottom-2 right-2 z-10 rounded-full bg-light2 p-2 sm:bottom-7 sm:right-7"
+        onClick={(e) => toggleDarkMode()}
       >
         {darkMode && (
-          <MdLightMode className="smooth-transition text-4xl text-light1 sm:text-5xl" />
+          <MdLightMode className="smooth-transition fill-dark1 text-4xl sm:text-5xl" />
         )}
         {!darkMode && (
-          <MdDarkMode className="smooth-transition text-4xl text-light1 sm:text-5xl" />
+          <MdDarkMode className="smooth-transition fill-dark1 text-4xl sm:text-5xl" />
         )}
       </button>
       <Routes>
-        <Route path="/" element={<EventList title="Events in Hydrabad" />} />
-        <Route path="/home" element={<Home title="Events in Hydrabad" />} />
+        <Route path="/" element={<Home title="Events in Hydrabad" />} />
+        <Route
+          path="/EventList"
+          element={<EventList title="Events in Hydrabad" />}
+        />
         <Route path="/eventsubmitionform" element={<EventEntryForm />} />
+        <Route path="/loading" element={<Loading />} />
         <Route path="/EventDetail/:eventTitle" element={<EventDetailPage />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/404" element={<PageNotFound />} />

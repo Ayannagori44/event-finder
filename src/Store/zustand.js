@@ -2,6 +2,12 @@ import create from "zustand";
 
 export const useStore = create((set) => ({
   // Form step1 states
+  darkMode: JSON.parse(localStorage.getItem("darkmode")) || false,
+  setDarkMode: (val) => {
+    set((val) => ({ darkMode: !val.darkMode }));
+    localStorage.setItem("darkmode", !val);
+  },
+
   title: "",
   setTitle: (val) => set({ title: val }),
 

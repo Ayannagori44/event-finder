@@ -2,40 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-::selection {
-  background: var(--primary);
-  color: white;
-}
-
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--dark1);
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
 }
 
 /* #fcc7a5 less light */
 body {
   --primary: #f87720;
+  --primary2: #ce5706;
   --secondary: #8c3700;
   --bg-color: #fdd2b5;
 
-  --dark1: #2a303c;
-  --dark2: #272a36;
+  --dark1: #272a36;
+  --dark2: #2a303c;
   --grey: #334155;
   --grey2: #4a4d55;
   --light1: #fff;
-  --light2: #f0f0f0;
+  --light2: #f2f2f2;
   --divider: #2a303c35;
 }
 
 body.darkmode {
   --dark1: #fff;
-  --dark2: #f0f0f0;
+  --dark2: #f2f2f2;
   --grey: #cbd5e1;
-  --light1: #2a303c;
-  --light2: #382f32;
+  --light1: #272a36;
+  --light2: #2a303c;
+}
+
+.gradient {
+  background: -webkit-linear-gradient(to bottom, #2a303c 40%, #fff 0%);
+  background: -moz-linear-gradient(to bottom, #2a303c 40%, #fff 0%);
+  background: -ms-linear-gradient(to bottom, #2a303c 40%, #fff 0%);
+  background: linear-gradient(to bottom, #2a303c 40%, #fff 0%);
 }
 
 img {
@@ -48,28 +57,16 @@ img {
   -webkit-touch-callout: none;
 }
 
-/* input,
-textarea {
-  outline: none;
-  border: 1px solid transparent;
-  @apply smooth-transition w-full resize-none rounded-lg bg-light2 p-1 px-3 py-1 text-lg font-semibold text-grey sm:w-[380px];
-} */
-
-/* textarea:hover,
-textarea:active,
-textarea:focus,
-input:hover,
-input:active,
-input:focus {
-  border-color: var(--dark1);
-} */
-/* 
-.icon {
-  @apply mr-5 flex cursor-pointer items-center justify-center rounded-full bg-light2 p-4;
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
-.icon > * {
-  @apply text-lg text-primary sm:text-xl lg:text-3xl;
-} */
+
+/* Utilities */
+
+.btn-primary {
+  @apply border-0 bg-primary text-light1 hover:bg-primary2;
+}
 
 .smooth-transition {
   transition: all 0.3s ease-in-out;
@@ -77,35 +74,6 @@ input:focus {
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-}
-
-.gradient {
-  background: linear-gradient(to bottom right, #38bdf8, #1e40af);
-}
-
-.step > div {
-  background: var(--primary);
-}
-.step h2,
-.step span {
-  opacity: 1;
-  color: var(--primary);
-}
-
-/* Styles for Tab in eventEntryForm step1 */
-.Indoor {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
-.Outdoor {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-}
-
-.Indoor.active,
-.Outdoor.active {
-  background: var(--primary) !important;
-  color: #f2f2f2 !important;
 }
 
 /* hides the adjustable buttons in number input and hide seconds field in time inputs */
@@ -124,22 +92,17 @@ input[type="number"] {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-.h {
+.translate50 {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-}
-
-.btn-submit {
-  @apply mx-auto mt-2 flex rounded-full bg-primary px-10 py-3 text-xl text-white sm:mt-8;
 }
 
 /* Used in Page Not Found screen */
@@ -174,6 +137,24 @@ input[type="number"] {
 body.darkmode .image-blur {
   filter: blur(20px) brightness(0.8);
   -webkit-filter: blur(20px) brightness(0.8);
+}
+
+lottie-player {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 5rem;
+}
+
+button,
+button:hover,
+button:focus,
+input,
+input:hover,
+input:focus {
+  border: none !important;
+  outline: none !important;
 }
 
 @media screen and (max-height: 700px) {
