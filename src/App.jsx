@@ -8,15 +8,12 @@ import Profile from "./Screen/Profile";
 import { useStore } from "./Store/zustand";
 import Home from "./Screen/Home";
 import Loading from "./Ui/Components/Loading";
+import Navbar from "./Ui/Components/Navbar";
 
-import { MdLightMode, MdDarkMode } from "react-icons/md";
+import DarkModeToggleButton from "./Ui/Components/DarkModeToggleButton";
 
 const App = () => {
-  const { darkMode, setDarkMode } = useStore((state) => state);
-
-  const toggleDarkMode = () => {
-    setDarkMode(darkMode);
-  };
+  const { darkMode } = useStore((state) => state);
 
   useEffect(() => {
     document.body.classList.toggle("darkmode", darkMode);
@@ -32,30 +29,21 @@ const App = () => {
 
   return (
     <section className={`App ${darkMode === "true" ? "darkmode" : ""}`}>
-      <button
-        className="smooth-transition fixed bottom-2 right-2 z-10 rounded-full bg-light2 p-2 sm:bottom-7 sm:right-7"
-        onClick={(e) => toggleDarkMode()}
-      >
-        {darkMode && (
-          <MdLightMode className="smooth-transition fill-dark1 text-4xl sm:text-5xl" />
-        )}
-        {!darkMode && (
-          <MdDarkMode className="smooth-transition fill-dark1 text-4xl sm:text-5xl" />
-        )}
-      </button>
+      <DarkModeToggleButton />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home title="Events in Hydrabad" />} />
         <Route
-          path="/EventList"
+          path="/explore"
           element={<EventList title="Events in Hydrabad" />}
         />
         <Route path="/eventsubmitionform" element={<EventEntryForm />} />
-        <Route path="/loading" element={<Loading />} />
-        <Route path="/EventDetail/:eventTitle" element={<EventDetailPage />} />
-        <Route path="/Profile" element={<Profile />} />
+        <Route path="/about" element={<Loading />} />
+        <Route path="/eventdetail:eventtitle" element={<EventDetailPage />} />
+        <Route path="/profile" element={<Loading />} />
+        {/* <Route path="/profile" element={<Profile />} /> */}
         <Route path="/404" element={<PageNotFound />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
-        {/* same place where you opened the server */}
       </Routes>
     </section>
   );

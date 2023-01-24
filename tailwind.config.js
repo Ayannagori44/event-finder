@@ -11,6 +11,7 @@ module.exports = {
         "bg-color": "var(--bg-color)",
         light1: "var(--light1)",
         light2: "var(--light2)",
+        light3: "var(--light3)",
         dark1: "var(--dark1)",
         dark2: "var(--dark2)",
         grey: "var(--grey)",

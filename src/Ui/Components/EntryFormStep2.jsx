@@ -2,7 +2,6 @@ import React from "react";
 
 import Input from "../Elements/Input";
 import Label from "../Elements/Label";
-import Dropdown from "../Components/Dropdown";
 import Tabs from "../Components/Tabs";
 
 import { useStore } from "../../Store/zustand";
@@ -47,9 +46,6 @@ const EntryFormStep1 = ({ setStep }) => {
         <Label title="Fee" />
         <Input id="Fee" type={"number"} setValue={setFee} value={fee} />
       </div>
-
-      {/* dropdown */}
-      <Dropdown label={"Type"} value={category} setValue={setCategory} />
 
       <div className="divide my-8">
         <Label title="Pictures" />
