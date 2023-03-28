@@ -24,9 +24,7 @@ const Home = () => {
             </div>
             <div className="content ml-4">
               <h1 className="text-xs text-white">Hi, Welcome👋🏻</h1>
-              <h1 className="text-base font-semibold text-white">
-                Ayan Nagori
-              </h1>
+              <h1 className="text-base font-semibold text-white">Ayan</h1>
             </div>
           </div>
 
